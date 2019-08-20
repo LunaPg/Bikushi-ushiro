@@ -1,0 +1,16 @@
+{
+  "extends": ["turbulent-typescript-base", "prettier", "prettier/@typescript-eslint"],
+  "plugins": ["prettier"],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "rules": {
+    "prettier/prettier": ["error"],
+    "import/named": "off"
+  },
+  "globals": {
+    "expect": true
+  }
+}
