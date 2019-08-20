@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "gbfs-client": "^0.7.4",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "sinon": "^7.4.1"
+  }
+}
