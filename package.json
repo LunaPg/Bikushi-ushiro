@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "@types/node-pushnotifications": "^1.0.3",
     "gbfs-client": "^0.7.4",
+    "node-pushnotifications": "^1.2.0",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
