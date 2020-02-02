@@ -2,5 +2,5 @@
 import { StationInfo } from 'gbfs-client/lib/types';
 
 export interface Projection {
-  add(station: StationInfo): void
+  add(station: StationInfo): boolean
 };

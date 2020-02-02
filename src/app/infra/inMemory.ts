@@ -8,7 +8,11 @@ export class inMemory implements Projection{
     // constructor();
 
     public add(station: StationInfo)  {
-      console.log(station)
+      try{
         this.stations.set(station.station_id, station);
+        return true;
+      }catch(error){
+        throw error;
+      } 
     }
 }
