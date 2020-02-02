@@ -61,5 +61,4 @@ typings/
 .next
 
 # Typescript javascript generated files
-
-lib
+lib/
