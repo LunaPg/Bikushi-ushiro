@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {  expect} from 'chai';
 import {sandbox as sinonSandbox} from 'sinon';
 // import GbfsClient from 'gbfs-client';
 import {gbfsStub, inMemoryStub } from "../../stubs";
@@ -7,6 +7,7 @@ import { StationInfo } from 'gbfs-client/lib/types';
 import faker from "faker";
 
 import { stationService } from '../../../domain/station/service';
+// import { fail } from 'assert';
 
 describe('service', () => {
   const sandbox = sinonSandbox.create();
@@ -39,5 +40,16 @@ describe('service', () => {
       const res = await StationService.add("1");
       expect(res).to.equal(true);
     });
+    it('should throw when statinInfo fail', () => {
+      gbfsStub.stationInfo.withArgs().returns(Promise.reject(new Error('fails')));
+      // to.be.rejectedWith have issue with ts, 
+      // switches to standard promises
+       return StationService.add("1").then(value => {
+        expect.fail( value, 'Should have vailed, instead returns a value');
+       }).catch(e => {
+         expect(e).to.be.instanceOf(Error);
+       })
+    });
+
   });
 });
