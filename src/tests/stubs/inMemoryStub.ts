@@ -1,9 +1,9 @@
-import {stub} from "sinon";
 import {inMemory} from "../../app/infra/inMemory";
+import { SinonSandbox} from 'sinon';
 
-const inMemoryStub = {
-    add: stub(inMemory.prototype,'add'),
-} 
-
-
+const inMemoryStub =  (sandbox: SinonSandbox) => {
+  return {
+    add: sandbox.stub(inMemory.prototype,'add'),
+  }
+};
 export {inMemoryStub}
