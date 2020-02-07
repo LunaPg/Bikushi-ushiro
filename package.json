@@ -34,7 +34,8 @@
     "sourceMap": true,
     "instrument": true,
     "exclude": [
-      "**/tests/**"
+      "**/tests/**",
+      "coverage"
     ]
   },
   "scripts": {
