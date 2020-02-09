@@ -1,11 +1,27 @@
 {
-  "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "lib",
-    "lib": ["es2018", "esnext.asynciterable"],
-    "types": ["mocha", "chai", "node"],
-    "target": "es6",
-    "module": "commonjs"
-  },
+    "compilerOptions": {
+
+      "rootDir": "src",
+      "outDir": "lib",
+      "lib": ["esnext", "esnext.array", "esnext.asynciterable"],
+      "types": ["mocha", "chai", "node"],
+      "target": "es6",
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+  
+      "strict": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+  
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+  
+      "sourceMap": true,
+      "inlineSources": true,
+  
+      "downlevelIteration": true,
+    },
+
   "exclude": ["node_modules", "test", "lib"]
 }

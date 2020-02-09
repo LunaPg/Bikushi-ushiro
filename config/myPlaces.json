@@ -1,0 +1,11 @@
+{
+    "bikeCompany": "Bixi",
+    "gbfsUrl": "https://api-core.bixi.com/gbfs/en/",
+    "stations":[{
+        "id": "1"
+    }]
+}  
+
+  
+
+ 
