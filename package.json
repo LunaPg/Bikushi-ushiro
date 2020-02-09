@@ -2,7 +2,7 @@
   "dependencies": {
     "@types/node-pushnotifications": "^1.0.3",
     "@types/uuid": "^3.4.7",
-    "gbfs-client": "git+https://github.com/LunaPg/node-gbfs-client.git#v0.7.5",
+    "gbfs-client": "^v0.7.4",
     "node-pushnotifications": "^1.2.0",
     "typescript": "^3.7.5",
     "uuid": "^3.4.0"
