@@ -12,6 +12,10 @@ jobs:
         node-version: [8.x, 10.x, 12.x]
 
     steps:
+    - uses: actions/checkout@master
+    - uses: codecov/codecov-action@v1
+      with:
+        token: 534c4f76-bbe7-41e6-969d-3df222b95513 #required
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
