@@ -14,8 +14,9 @@ describe('service', () => {
   let stationService: StationService;
 
   beforeEach(() => {
-    memoryStub = inMemoryStub(sandbox);
-    gbfsclientStub = gbfsStub(sandbox);
+    // memoryStub = inMemoryStub(sandbox);
+    memoryStub = inMemoryStub.inMemoryStub(sandbox);
+    gbfsclientStub = gbfsStub.gbfsStub(sandbox);
     stationService = new StationService(gbfsclientStub as any, memoryStub as any);
   });
 

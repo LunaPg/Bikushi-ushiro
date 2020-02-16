@@ -1,7 +1,7 @@
 import faker from 'faker';
 import { expect } from 'chai';
 import { StationInfo } from 'gbfs-client/lib/types';
-import { InMemory } from '../../../app/infra/inMemory';
+import InMemory from '../../../app/infra/inMemory';
 
 describe('inMemory', () => {
   let inMemoryStorage: InMemory;

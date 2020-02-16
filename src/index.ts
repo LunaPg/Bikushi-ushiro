@@ -1,6 +1,6 @@
 import Gbfs from 'gbfs-client';
 import StationService from './domain/station/service';
-import { InMemory } from './app/infra/inMemory';
+import InMemory from './app/infra/inMemory';
 
 const config = require('../config/myPlaces.json');
 
