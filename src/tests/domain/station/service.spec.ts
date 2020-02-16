@@ -43,7 +43,7 @@ describe('service', () => {
       // Have to return ArrayValue because ts
       // method overloading return different type of
       // pormise, could not test it with ts.
-      gbfsclientStub.stationInfo.withArgs().returns(Promise.resolve([stationInfo]));
+      gbfsclientStub.stationInfo.withArgs().returns(Promise.resolve(stationInfo));
       memoryStub.add.returns(true);
       const res = await StationService.add("1");
       expect(res).to.equal(true);

@@ -7,18 +7,17 @@ export class stationService{
 
   async add(stationId: string){
     try {
-      const station: StationInfo | StationInfo[] = await this.Gbgs.stationInfo(stationId);
+      const station: StationInfo  = await this.Gbgs.stationInfo(stationId);
       console.log(station);
       if (!station ) {
         throw new Error('[404] not Found');
       }
-      if (station instanceof Array){
+      if (station instanceof Array) {
         station.map((one) =>  this.projection.add(one));
-      }
-      else {this.projection.add(station);}
-      
-      return true;
-    } catch(e) {
+      } else {
+        this.projection.add(station);}
+        return true;
+     } catch(e) {
       throw new Error (e);
     }
   }
