@@ -1,9 +1,7 @@
-import {inMemory} from "../../app/infra/inMemory";
-import { SinonSandbox} from 'sinon';
+import { SinonSandbox } from 'sinon';
+import { InMemory } from '../../app/infra/inMemory';
 
-const inMemoryStub =  (sandbox: SinonSandbox) => {
-  return {
-    add: sandbox.stub(inMemory.prototype,'add'),
-  }
-};
-export {inMemoryStub}
+const inMemoryStub = (sandbox: SinonSandbox) => ({
+  add: sandbox.stub(InMemory.prototype, 'add'),
+});
+export default { inMemoryStub };

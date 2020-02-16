@@ -1,25 +1,31 @@
 import GbfsClient from 'gbfs-client';
-import { Projection } from '../../app/infra/projection';
 import { StationInfo } from 'gbfs-client/lib/types';
+import { Projection } from '../../app/infra/projection';
 
-export class stationService{
-  constructor( public Gbgs: GbfsClient, public projection:  Projection){};
+export default class StationService {
+  public Gbgs: GbfsClient;
 
-  async add(stationId: string){
+  public projection: Projection;
+
+  constructor(gbfs: GbfsClient, projection: Projection) {
+    this.Gbgs = gbfs;
+    this.projection = projection;
+  }
+
+  async add(stationId: string) {
     try {
-      const station: StationInfo  = await this.Gbgs.stationInfo(stationId);
-      console.log(station);
-      if (!station ) {
+      const station: StationInfo = await this.Gbgs.stationInfo(stationId);
+      if (!station) {
         throw new Error('[404] not Found');
       }
       if (station instanceof Array) {
-        station.map((one) =>  this.projection.add(one));
+        station.map(one => this.projection.add(one));
       } else {
-        this.projection.add(station);}
-        return true;
-     } catch(e) {
-      throw new Error (e);
+        this.projection.add(station);
+      }
+      // return true;
+    } catch (e) {
+      throw new Error(e);
     }
   }
-
-}  
+}
