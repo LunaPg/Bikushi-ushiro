@@ -22,8 +22,8 @@ export default class StationService {
         station.map(one => this.projection.add(one));
       } else {
         this.projection.add(station);
+        return true;
       }
-      // return true;
     } catch (e) {
       throw new Error(e);
     }
