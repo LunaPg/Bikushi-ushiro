@@ -1,11 +1,9 @@
 {
-    "bikeCompany": "Bixi",
-    "gbfsUrl": "https://api-core.bixi.com/gbfs/en/",
-    "stations":[{
-        "id": "1"
-    }]
-}  
-
-  
-
- 
+  "bikeCompany": "Bixi",
+  "gbfsUrl": "http://api-core.bixi.com/gbfs/en/",
+  "stations": [
+    {
+      "id": "25"
+    }
+  ]
+}
