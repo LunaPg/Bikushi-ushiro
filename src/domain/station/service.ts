@@ -18,14 +18,30 @@ export default class StationService {
       if (!station) {
         throw new Error('[404] not Found');
       }
-      if (station instanceof Array) {
-        station.map(one => this.projection.add(one));
-      } else {
-        this.projection.add(station);
-        return true;
-      }
+      this.projection.add(station);
+      return true;
     } catch (e) {
       throw new Error(e);
     }
+  }
+
+  // Try to get station from API,
+  // if fails, check in cache
+  async getStation(stationId: string): Promise<StationInfo> {
+    const station: StationInfo = await this.Gbgs.stationInfo(stationId);
+    if (!station) {
+      const cachedStation = this.projection.get(stationId);
+      if (!cachedStation) {
+        throw new Error('[WARN] Could not get from API or cache');
+      }
+      return cachedStation;
+    }
+    this.projection.add(station);
+    return station;
+  }
+
+  async getRemainingBike(stationId: string): Promise<number> {
+    const station = await this.getStation(stationId);
+    return station.capacity || 0;
   }
 }
