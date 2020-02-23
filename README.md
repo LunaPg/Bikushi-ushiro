@@ -26,7 +26,7 @@ I'll just add my favorite station and check if there's available docks or bike.
 Maybe I will improve it for future users that has a small device like my S2X 😸 
 
 
-###Install 
+## Install 
 ```
 $ git clone git@github.com:LunaPg/Bikushi-ushiro.git
 $ npm install
