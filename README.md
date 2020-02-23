@@ -1,40 +1,35 @@
 [![codecov](https://codecov.io/gh/LunaPg/Bikushi-ushiro/branch/master/graph/badge.svg)](https://codecov.io/gh/LunaPg/Bikushi-ushiro)
 
+## Welcome to the Bikushi-ushiro wiki!
 
-## Welcome to GitHub Pages
+## Why ?
 
-You can use the [editor on GitHub](https://github.com/LunaPg/Bikushi-ushiro/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+So first, why did I create this ??
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I used to have a Galaxy S2X for almost 7 years. It works like a charm, event if he's a little slow.
 
-### Markdown
+The longer I get this phone, the less applications I could use.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Not because it requires top notch new Android feature,  ...
 
-```markdown
-Syntax highlighted code block
+I know that as devs, we should stop maintain old hardware, it's time consuming and really hard.
 
-# Header 1
-## Header 2
-### Header 3
+But we should find solution not to throw away our device every year, the planet can not handle it anyway.
 
-- Bulleted
-- List
+So I've decided to create a small application to get my favorite bike share service in my town.
 
-1. Numbered
-2. List
+Under the hood, it's just an API delivering JSON.
+(You can find the specs here : https://github.com/NABSA/gbfs)
 
-**Bold** and _Italic_ and `Code` text
+I'll just add my favorite station and check if there's available docks or bike.
 
-[Link](url) and ![Image](src)
+Maybe I will improve it for future users that has a small device like my S2X 😸 
+
+
+###Install 
+```
+$ git clone git@github.com:LunaPg/Bikushi-ushiro.git
+$ npm install
+$ npm run build
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/LunaPg/Bikushi-ushiro/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
