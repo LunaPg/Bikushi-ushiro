@@ -8,11 +8,15 @@ const GbfsClient = new Gbfs(config.gbfsUrl);
 const inMemory = new InMemory();
 const service = new StationService(GbfsClient, inMemory);
 
-(async () => {
+async function main() {
   try {
     await service.add(config.stations[0].id);
-    // console.log('test');
+    console.log();
   } catch (e) {
     throw new Error(e);
   }
-})();
+}
+
+main().catch(e => {
+  throw e;
+});
