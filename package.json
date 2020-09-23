@@ -3,11 +3,9 @@
     "@types/node-pushnotifications": "^1.0.3",
     "@types/uuid": "^3.4.9",
     "gbfs-client": "^v0.8.1",
-    "install": "^0.13.0",
     "node-pushnotifications": "^1.4.1",
     "npm": "^6.14.8",
-    "uuid": "^3.4.0",
-    "yarn": "^1.22.5"
+    "uuid": "^3.4.0"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^0.1.3",
