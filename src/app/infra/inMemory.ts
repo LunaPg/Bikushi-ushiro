@@ -12,4 +12,9 @@ export default class InMemory implements Projection {
   public get(stationId: string): StationInfo | undefined {
     return this.stations.get(stationId);
   }
+
+  public remove(stationId: string): boolean {
+    this.stations.delete(stationId);
+    return true;
+  }
 }

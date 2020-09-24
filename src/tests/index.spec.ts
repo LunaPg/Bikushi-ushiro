@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { createSandbox } from 'sinon';
-import { stationServiceStub } from './stubs';
+import { stationServiceStub } from './stubs/index';
 
 import main from '../index';
 
