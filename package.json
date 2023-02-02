@@ -4,7 +4,7 @@
     "@types/uuid": "^3.4.9",
     "gbfs-client": "^v0.8.1",
     "node-pushnotifications": "^1.4.1",
-    "npm": "^6.14.8",
+    "npm": "^9.4.1",
     "uuid": "^3.4.0"
   },
   "devDependencies": {
